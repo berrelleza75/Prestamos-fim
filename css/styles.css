@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  background-color: #f0f0f0;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Barra lateral izquierda */
+#sidebar {
+  width: 200px;
+  min-width: 200px;
+  background-color: #1a3a5c;
+  color: #fff;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#sidebar h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a8c8e8;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2e5a8a;
+}
+
+#sidebar button {
+  width: 100%;
+  padding: 9px 10px;
+  background-color: #2e5a8a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+#sidebar button:hover {
+  background-color: #3a74b0;
+}
+
+/* Área de contenido */
+#main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Encabezado del formulario */
+.header-table {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.fim-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #1a3a5c;
+}
+
+.fim-sub {
+  font-size: 11px;
+  color: #555;
+}
+
+.form-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #1a3a5c;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #1a3a5c;
+  margin: 8px 0 14px;
+}
+
+/* Tablas del formulario */
+table.form-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 14px;
+  background: #fff;
+}
+
+table.form-table th {
+  background-color: #1a3a5c;
+  color: #fff;
+  padding: 8px;
+  text-align: center;
+  font-size: 13px;
+}
+
+table.form-table td {
+  border: 1px solid #bbb;
+  padding: 8px 10px;
+  vertical-align: middle;
+}
+
+table.form-table td b {
+  color: #1a3a5c;
+}
+
+/* Inputs y selects */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 4px 6px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2e5a8a;
+  background: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Caja de términos y condiciones */
+.terms-box {
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* Sección de firmas */
+.sign-table {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.sign-table td {
+  text-align: center;
+  padding: 10px;
+  width: 33%;
+}
+
+.sign-line {
+  border-top: 1px solid #333;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.sign-label {
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: bold;
+  color: #1a3a5c;
+}
+
+.footer {
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Vistas de administración */
+.view-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1a3a5c;
+}
+
+.view-header h2 {
+  color: #1a3a5c;
+  font-size: 16px;
+  margin: 0;
+}
+
+.fila-agregar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.fila-agregar input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.btn-agregar {
+  padding: 6px 14px;
+  background: #1a3a5c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-agregar:hover {
+  background: #2e5a8a;
+}
+
+.btn-regresar {
+  padding: 6px 14px;
+  background: #888;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-regresar:hover {
+  background: #666;
+}
+
+/* Lista de elementos en vistas */
+.lista-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lista-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f8fc;
+  border: 1px solid #d0dce8;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.btn-eliminar {
+  padding: 4px 10px;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-eliminar:hover {
+  background: #a93226;
+}
+
+/* Contenedor de las vistas embebidas en el iframe */
+body.vista {
+  display: block;
+  background: #fff;
+  padding: 20px;
+}

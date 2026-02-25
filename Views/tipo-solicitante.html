@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tipo de Solicitante</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="vista">
+
+  <div class="view-header">
+    <button class="btn-regresar" onclick="regresar()">← Regresar</button>
+    <h2>Tipos de Solicitante</h2>
+  </div>
+
+  <div class="fila-agregar">
+    <input type="text" id="nuevo-item" placeholder="Nuevo tipo...">
+    <button class="btn-agregar" onclick="agregar(datos, 'tiposSolicitante')">Agregar</button>
+  </div>
+
+  <ul class="lista-items" id="lista"></ul>
+
+  <script src="../js/vistas.js"></script>
+  <script>
+    const datos = cargarDatos();
+    if (datos) renderizarLista(datos.tiposSolicitante, datos, "tiposSolicitante");
+  </script>
+
+</body>
+</html>
